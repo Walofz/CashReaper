@@ -58,4 +58,6 @@ RUN chmod +x /etc/services.d/honeygain-autoclaim/run
 RUN chmod +x /etc/services.d/packetstream/run
 RUN chmod +x /etc/services.d/pawnsapp/run
 
+RUN chmod +x /bin/earnapp_log2ram_service
+RUN chmod +x /bin/honeygain_autoclaim_service
 ENTRYPOINT [ "/init" ]
