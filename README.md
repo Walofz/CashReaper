@@ -19,7 +19,7 @@ Highlights:
 2. git clone
 
 ```
-git clone https://github.com/technotiger/CashReaper.git && cd CashReaper
+git clone https://github.com/Walofz/CashReaper && cd CashReaper
 ```
 
 3. Edit the `settings.conf` file. Refer the following section for details. For example, to edit using nano:
@@ -31,7 +31,7 @@ Save the modified settings file.
 4. Build docker image. This can take a few minutes.
 
 ```
-docker build . -t technotiger/cashreaper:latest
+docker build . -t walofz/cashreaper:latest
 ```
 
 5. Once image is built, create and run the container.
