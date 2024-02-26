@@ -50,5 +50,12 @@ WORKDIR /opt/hg-autoclaim
 RUN pip install --no-cache-dir requests
 WORKDIR /root
 RUN chmod +x /etc/services.d/startup/run
+RUN chmod +x /etc/services.d/bitping/run
+RUN chmod +x /etc/services.d/earnapp/run
+RUN chmod +x /etc/services.d/earnapp-log2ram/run
+RUN chmod +x /etc/services.d/honeygain/run
+RUN chmod +x /etc/services.d/honeygain-autoclaim/run
+RUN chmod +x /etc/services.d/packetstream/run
+RUN chmod +x /etc/services.d/pawnsapp/run
 
 ENTRYPOINT [ "/init" ]
