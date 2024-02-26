@@ -9,7 +9,7 @@ else
     exit 1
 fi
 
-docker run -d --log-driver none --restart unless-stopped --tmpfs /tmp:exec --tmpfs /run:exec --mount source=vol-cashreaper,target=/etc/earnapp --env-file ${SCRIPT_DIR}/settings.conf --name cashreaper technotiger/cashreaper
+docker run -d --restart unless-stopped --tmpfs /tmp:exec --tmpfs /run:exec --mount source=vol-cashreaper,target=/etc/earnapp --env-file ${SCRIPT_DIR}/settings.conf --name cashreaper technotiger/cashreaper
 
 
 if [[ "$USE_EARNAPP" == "y" ]]

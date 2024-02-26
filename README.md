@@ -7,7 +7,6 @@ Highlights:
 - Works on raspberry pi
 - Earn small amount of money (beer money) by sharing for your internet bandwidth
 - 100% passive income, set and forget
-- No continuous disk writes - particularly helpful for devices using flash storage like raspberry pi
 - Only verified services with confirmed payouts
 - Automatically claim honeygain lucky pot to maximize passive income.
 
