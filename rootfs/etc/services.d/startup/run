@@ -1,11 +1,6 @@
 #!/command/with-contenv bash
 s6-svc -O /run/service/startup
 
-if [[ "$USE_TRAFFMONETIZER" != "n" ]]
-then
-    s6-svc -u /run/service/traffmonetizer
-fi
-
 if [[ "$USE_PAWNSAPP" != "n" ]]
 then
     s6-svc -u /run/service/pawnsapp
