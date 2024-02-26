@@ -59,7 +59,7 @@ HG_PASSWORD=MyP@$$W0rd
 <br>
 Honeygain offers additional credits in the form of lucky pot and achievements. Users need to visit their website everyday to claim these credits. You can automate this process by setting `USE_HONEYGAIN_AUTOCLAIM` to `y` in the settings file.
 
-This will run a program every 6 hours to automatically claim any available honeygain lucky pot and unlocked rewards, thus maximizing your earnings while remaining 100% passive.
+This will run a program every 30 mins to automatically claim any available honeygain lucky pot and unlocked rewards, thus maximizing your earnings while remaining 100% passive.
 <br><br>Example
 ```
 USE_HONEYGAIN_AUTOCLAIM=y

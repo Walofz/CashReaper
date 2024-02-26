@@ -18,8 +18,8 @@ do
     # run auto claim every 6 hours
     cd /opt/hg-autoclaim
     python3 main.py
-    echo Honeygain Auto-Claim will run again in 6 hours
-    sleep 21600
+    echo Honeygain Auto-Claim will run again in 30 mins
+    sleep 1200
 done
 
 sleep 60
