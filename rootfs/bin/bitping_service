@@ -5,7 +5,7 @@ then
     sleep $[ ( $RANDOM % 30 )  + 1 ]s
 fi
 
-if ! ps aux | grep -q "bitpingd"
+if ! ps aux | grep -q "[b]itping-node"
 then
     echo Starting Bitping Service
 
@@ -22,9 +22,6 @@ then
     then
         echo Running `uname -m` bitping node
         /opt/bitping/bitpingd --server --email $BP_EMAIL -password $BP_PASSWORD 2>&1
-    else
-        echo Running default bitping node
-        /usr/bin/qemu-x86_64 /opt/bitping/bitpingd --server --email $BP_EMAIL -password $BP_PASSWORD 2>&1
     fi
     
     echo Bitping service crashed, restarting
