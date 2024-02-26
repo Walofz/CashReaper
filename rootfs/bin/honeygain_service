@@ -12,12 +12,8 @@ if [[ -z "$HG_EMAIL" || -z "$HG_PASSWORD" ]]; then
     exit 1
 fi
 
-if [[ `uname -m` != "x86_64" ]]
-then
-    /usr/bin/qemu-x86_64 -E LD_PRELOAD=/opt/honeygain/libhg.so.2.0.0 /opt/honeygain/libmsquic.so.2 /opt/honeygain/honeygain -tou-accept -email $HG_EMAIL -pass $HG_PASSWORD -device `hostname` 2>&1
-else
-    LD_PRELOAD=/opt/honeygain/libhg.so.2.0.0 /opt/honeygain/libmsquic.so.2 /opt/honeygain/honeygain -tou-accept -email $HG_EMAIL -pass $HG_PASSWORD -device `hostname` 2>&1
-fi
+LD_PRELOAD=/opt/honeygain/libhg.so.2.0.0 /opt/honeygain/libmsquic.so.2 /opt/honeygain/honeygain -tou-accept -email $HG_EMAIL -pass $HG_PASSWORD -device `hostname` 2>&1
+
 echo Honeygain service crashed, restarting
 
 sleep 60
