@@ -95,27 +95,6 @@ USE_EARNAPP=y
 <br><b>Storage: </b>Persistent storage is recommend for Earnapp to ensure that you don't have to repeat the worker-account linking process when container is recreated. If you use the run.sh script, a docker volume named vol-cashreaper will be automatically created and used for this purpose.
 <br><br>
 
-# 4. Packet Stream
-Register for an account. In the settings file set `USE_PACKET_STREAM` to `y` and `PS_ID` to your CID. To find your CID, navigate to the [download page](https://packetstream.io/dashboard/download) and find the linux/docker instructions. You will find your CID in the setup command listed there - look for CID=xxxx.
-<br><br>Example
-```
-# Packet Stream
-USE_PACKET_STREAM=y
-PS_ID=ab12
-```
-<br><br>
-
-# 5. Bitping
-Register for an account. In the settings file, add your email to `BP_EMAIL` and password to `BP_PASSWORD` and set the `USE_BITPING` to `y`.
-<br><br>Example
-```
-# BitPing
-USE_BITPING=y
-BP_EMAIL=example@example.com
-BP_PASSWORD=MyP@$$W0rd
-```
-<br><br>
-
 ---
 # Accounts
 
@@ -123,8 +102,6 @@ You will need an account for each of the following services.
 - [Register Earnapp](https://earnapp.com/i/Dz6Wlsjd)
 - [Register Honeygain](https://r.honeygain.me/PAITOB169D)
 - [Register Pawns.app](https://pawns.app/?r=1313227)
-- [Register Packetstream](https://packetstream.io/?psr=50No)
-- [Register BitPing](https://app.bitping.com?r=j5mXMC7t)
 
 
 <br>** Please use these links to support this project at no cost to you. You will receive a setup bonus on some sites for using these referral links.
