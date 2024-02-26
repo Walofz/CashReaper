@@ -105,19 +105,7 @@ PS_ID=ab12
 ```
 <br><br>
 
-# 5. Traffmonetizer
-Register for an account. In the settings file, add your `Application Token` to `TRAFF_TOKEN` and set the `USE_TRAFFMONETIZER` to `y`.
-
-You can find the `Application Token` on your [dashboard](https://app.traffmonetizer.com/dashboard).
-<br><br>Example
-```
-# Traffmonetizer
-USE_TRAFFMONETIZER=y
-TRAFF_TOKEN=ZXhhbXBsZFVYQU1RTEVlaGFtcGxlRVhXTVBMRQo=
-```
-<br><br>
-
-# 6. Bitping
+# 5. Bitping
 Register for an account. In the settings file, add your email to `BP_EMAIL` and password to `BP_PASSWORD` and set the `USE_BITPING` to `y`.
 <br><br>Example
 ```
@@ -132,11 +120,10 @@ BP_PASSWORD=MyP@$$W0rd
 # Accounts
 
 You will need an account for each of the following services.
-- [Register Earnapp](https://earnapp.com/i/48Bwwfmz)
-- [Register Honeygain](https://r.honeygain.me/TECHTA09A1)
-- [Register Pawns.app](https://pawns.app?r=1358509)
-- [Register Packetstream](https://packetstream.io/?psr=56yi)
-- [Register Traffmonetizer](https://traffmonetizer.com/?aff=1160018)
+- [Register Earnapp](https://earnapp.com/i/Dz6Wlsjd)
+- [Register Honeygain](https://r.honeygain.me/PAITOB169D)
+- [Register Pawns.app](https://pawns.app/?r=1313227)
+- [Register Packetstream](https://packetstream.io/?psr=50No)
 - [Register BitPing](https://app.bitping.com?r=j5mXMC7t)
 
 
