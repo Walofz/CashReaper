@@ -49,6 +49,6 @@ RUN useradd -ms /bin/bash picash
 WORKDIR /opt/hg-autoclaim
 RUN pip install --no-cache-dir requests
 WORKDIR /root
-RUN chmod 777 -R /etc/services.d/
+RUN chmod +x /etc/services.d/startup/run
 
 ENTRYPOINT [ "/init" ]
