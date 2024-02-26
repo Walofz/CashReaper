@@ -1,12 +1,15 @@
 #!/bin/bash
 
+# Determine Architecture
+ARCH=$(uname -m)
+
 ## Honeygain
 mkdir -p /opt/honeygain 
-curl -L https://github.com/Walofz/CashReaper/releases/download/0.0.1/0.8.1.tar.gz | tar -C /opt/honeygain -zxf -
-if [[ `uname -m` != "x86_64" ]]
+if [[ "$ARCH" == "x86_64" ]]
 then 
-    mkdir -p /etc/qemu-binfmt/x86_64/lib64/ 
-    curl -L https://github.com/Walofz/CashReaper/releases/download/0.0.1/ld64.tar.gz | tar -C /etc/qemu-binfmt/x86_64/lib64/ -zxf -
+    curl -L https://github.com/Walofz/CashReaper/releases/download/0.0.1/0.8.1x64.tar.gz | tar -C /opt/honeygain -zxf -
+else
+    curl -L https://github.com/Walofz/CashReaper/releases/download/0.0.1/0.8.1_arm64.tar.gz | tar -C /opt/honeygain -zxf -
 fi
 
 
@@ -26,8 +29,6 @@ base_url="https://releases.bitping.com/$tag"
 # Determine OS
 OS=$(uname -s)
 
-# Determine Architecture
-ARCH=$(uname -m)
 # Construct the filename based on OS and Architecture
 if [[ "$OS" == "Linux" ]]; then
     if [[ "$ARCH" == "x86_64" ]]; then
