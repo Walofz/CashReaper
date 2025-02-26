@@ -1,6 +1,6 @@
-FROM python:3.11-slim-bullseye
+FROM python:slim-bullseye
 
-ARG BUILDPLATFORM BUILDOS BUILDARCH BUILDVARIANT TARGETPLATFORM TARGETOS TARGETARCH TARGETVARIANT
+ARG BUILDPLATFORM BUILDOS BUILDARCH BUILDVARIANT TARGETPLATFORM TARGETOS TARGETARCH TARGETVARIANT 
 ARG S6_OVERLAY_VERSION=v3.2.0.2
 ARG DEBIAN_FRONTEND='noninteractive'
 
@@ -10,9 +10,6 @@ RUN apt-get update && \
        apt-file \
        apt-transport-https \
        apt-utils \
-       bash \
-       ca-certificates \
-       coreutils \
        curl \
        iproute2 \
        libc6-arm64-cross \
@@ -30,32 +27,19 @@ RUN apt-get update && \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-RUN curl --fail https://github.com/just-containers/s6-overlay/releases/download/${S6_OVERLAY_VERSION}/s6-overlay-noarch.tar.xz -SLo- | tar -C / -Jxpf - && \
-    curl --fail https://github.com/just-containers/s6-overlay/releases/download/${S6_OVERLAY_VERSION}/s6-overlay-`uname -m| sed 's/armv7l/armhf/g'`.tar.xz -SLo- | tar -C / -Jxpf -
-
+RUN curl --fail https://github.com/just-containers/s6-overlay/releases/download/${S6_OVERLAY_VERSION}/s6-overlay-x86_64.tar.xz -SLo- | tar -C / -Jxpf -
 
 COPY rootfs/ /
 
-
-COPY --from=packetstream/psclient:latest /usr/local/bin/ /usr/local/bin/
-
+COPY --from=honeygain/honeygain:latest /usr/lib/ /usr/lib/
+COPY --from=honeygain/honeygain:latest /app/ /opt/honeygain/
 
 RUN /installer/main.sh
 
-
-RUN useradd -ms /bin/bash picash
-
+RUN useradd -ms /bin/bash cashreaper
 
 WORKDIR /opt/hg-autoclaim
-RUN pip install --no-cache-dir requests
+RUN pip install --upgrade pip --no-cache-dir requests
 WORKDIR /root
-RUN chmod +x /etc/services.d/startup/run
-RUN chmod +x /etc/services.d/earnapp/run
-RUN chmod +x /etc/services.d/earnapp-log2ram/run
-RUN chmod +x /etc/services.d/honeygain/run
-RUN chmod +x /etc/services.d/honeygain-autoclaim/run
-RUN chmod +x /etc/services.d/pawnsapp/run
 
-RUN chmod +x /bin/earnapp_log2ram_service
-RUN chmod +x /bin/honeygain_autoclaim_service
 ENTRYPOINT [ "/init" ]
