@@ -27,13 +27,7 @@ nano settings.conf
 ```
 Save the modified settings file.
 
-4. Build docker image. This can take a few minutes.
-
-```
-docker build . -t walofz/cashreaper:latest
-```
-
-5. Once image is built, create and run the container.
+4. Once image is built, create and run the container.
 ```
 ./run.sh
 ```
