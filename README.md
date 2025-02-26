@@ -4,7 +4,7 @@ A lightweight docker image running multiple passive income applications. Support
 
 Highlights:
 ---
-- Works on raspberry pi
+- Works on x86_64
 - Earn small amount of money (beer money) by sharing for your internet bandwidth
 - 100% passive income, set and forget
 - Only verified services with confirmed payouts
@@ -66,18 +66,7 @@ USE_HONEYGAIN_AUTOCLAIM=y
 ```
 <br><br>
 
-# 2. Pawns.app
-Register for an account. In the settings file, add your email to `PA_EMAIL` and password to `PA_PASSWORD` and set the `USE_PAWNSAPP` to `y`.
-<br><br>Example
-```
-# Pawns.app
-USE_PAWNSAPP=y
-PA_EMAIL=example@example.com
-PA_PASSWORD=MyP@$$W0rd
-```
-<br><br>
-
-# 3. Earnapp
+# 2. Earnapp
 Register for an account. Set `USE_EARNAPP` to `y` in the `settings.conf` file.
 
 The run.sh script will print a link that you need to paste into your browser to "link" the worker to your account. This needs to be repeated per container instance.
@@ -99,9 +88,8 @@ USE_EARNAPP=y
 # Accounts
 
 You will need an account for each of the following services.
-- [Register Earnapp](https://earnapp.com/i/Dz6Wlsjd)
-- [Register Honeygain](https://r.honeygain.me/PAITOB169D)
-- [Register Pawns.app](https://pawns.app/?r=1313227)
+- [Register Earnapp](https://earnapp.com/i/zlg7QwPh)
+- [Register Honeygain](https://r.honeygain.me/WALOF6C3E5)
 
 
 <br>** Please use these links to support this project at no cost to you. You will receive a setup bonus on some sites for using these referral links.
